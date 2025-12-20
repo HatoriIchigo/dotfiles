@@ -48,6 +48,7 @@ vim.api.nvim_set_keymap('n', '<leader>ls', '<cmd>Lspsaga show_line_diagnostics<C
 vim.api.nvim_set_keymap('n', '<leader>ln', '<cmd>Lspsaga diagnostic_jump_next<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>lp', '<cmd>Lspsaga diagnostic_jump_prev<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>lg', '<cmd>Lspsaga goto_definition<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>lt', '<cmd>Trouble diagnostics toggle<CR>', { desc = 'open diagnostics info', noremap = true })
 
 -- aerial
 vim.api.nvim_set_keymap('n', '<leader>aa', '<cmd>AerialToggle<CR>', { noremap = true })
