@@ -70,15 +70,30 @@ require("lazy").setup({
         -- 自動補完プラグイン
         {"hrsh7th/nvim-cmp"},
         {"neovim/nvim-lspconfig"},
-        -- lsp補完
         {"hrsh7th/cmp-nvim-lsp"},
-        -- バッファ補完
         {"hrsh7th/cmp-buffer"},
-        -- パス補完
         {"hrsh7th/cmp-path"},
+        {"hrsh7th/vim-vsnip"},
+        {
+            "zbirenbaum/copilot-cmp",
+            config = function()
+                require("copilot_cmp").setup()
+            end
+        },
+        {
+            "zbirenbaum/copilot.lua",
+            cmd = "Copilot",
+            event = "InsertEnter",
+            config = function()
+                require("copilot").setup({
+                    suggestion = { enabled = false, auto_trigger = false, keymap = { accept = false } },
+                    panel = { enabled = true },
+                    filetypes = { markdown = true, ["."] = false }
+                })
+            end
+        },
         -- cmp補完でアイコンを出す
         {"onsails/lspkind.nvim"},
-        {"hrsh7th/vim-vsnip"},
         -- luaSnip補完
         {"L3MON4D3/LuaSnip"},
         -- lint
@@ -90,6 +105,11 @@ require("lazy").setup({
 
         -- 非同期処理用？
         {"nvim-lua/plenary.nvim"},
+
+        ---------------------------------------------------------
+        ---                     AI関連                        ---
+        ---------------------------------------------------------
+        { import = "plugins.claude" },
 
         ---------------------------------------------------------
         ---                  ファインダー                     ---

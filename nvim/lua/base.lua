@@ -43,3 +43,5 @@ vim.opt.termguicolors = true
 
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 2
+
+vim.opt.showtabline = 0

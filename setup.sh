@@ -3,7 +3,7 @@ NEOVIM_VERSION="v0.11.5"
 
 function npmInstall() {
     if [ $(npm list -g | grep $1 | wc -l) -ne 1 ]; then
-        npm install -g $1
+        sudo npm install -g $1
     fi
 }
 
@@ -53,9 +53,8 @@ function apt_installer() {
     if [ $? -ne 0 ]; then
         echo "nodeをインストールします..."
         sudo apt-get update
-        sudo apt-get install -y ca-certificates curl gnupg
-        curl -fsSL deb.nodesource.com | sudo -E bash -
-        sudo apt-get install -y nodejs
+        curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+        sudo apt install -y nodejs
     fi
 
     # java21インストール

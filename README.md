@@ -17,6 +17,15 @@
     ```
 
 
-## 適用
-1. 
 
+## 初回起動時
+1. `Copilot auth`を実行し、GitHub Copilotの認証を行う (`Copilot stasus`で認証状態を確認可能)
+2. `TSInstall <language>`
+    - python
+    - bash
+    - lua
+    - json
+    - yaml
+    - java
+    - javascript
+    - go

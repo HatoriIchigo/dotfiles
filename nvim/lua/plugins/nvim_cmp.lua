@@ -18,6 +18,7 @@ cmp.setup({
         { name = "nvim_lsp" },
         { name = "buffer" },
         { name = "path" },
+        { name = "copilot" },
     },
     mapping = cmp.mapping.preset.insert({
         ["<C-p>"] = cmp.mapping.select_prev_item(),
@@ -40,7 +41,7 @@ cmp.setup({
         ["<C-n>"] = cmp.mapping.select_next_item(),
         -- ['<C-l>'] = cmp.mapping.complete(),
         ['<C-c>'] = cmp.mapping.abort(),
-        ["<CR>"] = cmp.mapping.confirm { select = true },
+        ["<CR>"] = cmp.mapping.confirm { select = false },
     }),
     experimental = {
         ghost_text = false,

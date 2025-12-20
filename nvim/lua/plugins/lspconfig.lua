@@ -24,6 +24,9 @@ require('lspconfig').jsonls.setup {
 require('lspconfig').gopls.setup {
 }
 
+require('lspconfig').ts_ls.setup {
+}
+
 local java_lsp_folder = neovim_settings_root_dir .. 'lsp/java/'
 local jdtls_laucher = vim.fn.glob(java_lsp_folder .. 'plugins/org.eclipse.equinox.launcher_*.jar')
 local lombok = java_lsp_folder .. 'lombok.jar'
