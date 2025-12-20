@@ -66,13 +66,20 @@ function apt_installer() {
         sudo apt-get install openjdk-21-jdk -y
     fi
 
+    # その他必要なツールのインストール
+    rg --version 2>&1 > /dev/null
+    if [ $? -ne 0 ]; then
+        echo "ripgrepをインストールします..."
+        sudo apt-get update
+        sudo apt-get install ripgrep -y
+    fi
 
     # LSPインストール
-    # npmInstall "pyright"
-    # npmInstall "bash-language-server"
-    # npmInstall "vscode-langservers-extracted"
-    # npmInstall "typescript"
-    # npmInstall "typescript-language-server"
+    npmInstall "pyright"
+    npmInstall "bash-language-server"
+    npmInstall "vscode-langservers-extracted"
+    npmInstall "typescript"
+    npmInstall "typescript-language-server"
     if [ ! -d $HOME/.config/nvim/lsp/java ]; then
         CUR_DIR=$(pwd)
         mkdir -p $HOME/.config/nvim/lsp/java

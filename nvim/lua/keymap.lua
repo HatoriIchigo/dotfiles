@@ -30,8 +30,9 @@ vim.api.nvim_set_keymap("i", "<C-o>", "<Esc>o", { noremap = true, silent = true 
 vim.api.nvim_set_keymap("i", "<C-n>", "<BS>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<C-u>", "<Del>", { noremap = true, silent = true })
 
--- fern
-vim.api.nvim_set_keymap('n', '<leader>n', ':Fern . -reveal=%<CR>', { noremap = true })
+-- neo-tree
+vim.api.nvim_set_keymap('n', '<leader>nn', ':Neotree toggle float<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>ng', ':Neotree git_status float<CR>', { noremap = true })
 
 -- telescope
 local telescope = require("telescope.builtin")

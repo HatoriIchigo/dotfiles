@@ -52,9 +52,10 @@ require("lazy").setup({
         ---------------------------------------------------------
         ---                  ファイラー                       ---
         ---------------------------------------------------------
-        {"lambdalisue/fern.vim"},
-        {"lambdalisue/fern-renderer-devicons.vim"},
-        {"lambdalisue/glyph-palette.vim"},
+        -- {"lambdalisue/fern.vim"},
+        -- {"lambdalisue/fern-renderer-devicons.vim"},
+        -- {"lambdalisue/glyph-palette.vim"},
+        { import = "plugins.neo-tree" },
 
         ---------------------------------------------------------
         ---                     LSP                           ---
