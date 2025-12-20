@@ -20,7 +20,6 @@ vim.g.maplocalleader = "\\"
 
 require("lazy").setup({
     spec = {
-    
         ---------------------------------------------------------
         ---                  ビジュアル                      ---
         ---------------------------------------------------------
@@ -28,7 +27,6 @@ require("lazy").setup({
         {"tomasr/molokai"},
         -- ステータスバー＆タブバー
         {"nvim-lualine/lualine.nvim"},
-        {"romgrk/barbar.nvim"},
         -- アイコン系
         {"nvim-tree/nvim-web-devicons"},
         {"ryanoasis/vim-devicons"},

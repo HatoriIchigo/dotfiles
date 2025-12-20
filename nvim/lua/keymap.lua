@@ -12,8 +12,6 @@ vim.api.nvim_set_keymap('n', 'k', 'gk', { noremap = true })
 vim.api.nvim_set_keymap('n', '<up>', 'gk', { noremap = true })
 vim.api.nvim_set_keymap('n', '<down>', 'gj', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Esc><Esc>', ':nohlsearch<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-j>', ':bprev<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-k>', ':bnext<CR>', { noremap = true })
 -- 通常のvimの拡張
 vim.api.nvim_set_keymap('n', '<leader>bc', '<cmd>BufferClose<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>ko', 'o<Esc>', { noremap = true })
