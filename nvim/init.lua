@@ -1,4 +1,4 @@
-require("dein")
+require("lazy_config")
 
 require("base")
 require("keymap")

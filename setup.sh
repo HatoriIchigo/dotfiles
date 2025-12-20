@@ -68,11 +68,11 @@ function apt_installer() {
 
 
     # LSPインストール
-    npmInstall "pyright"
-    npmInstall "bash-language-server"
-    npmInstall "vscode-langservers-extracted"
-    npmInstall "typescript"
-    npmInstall "typescript-language-server"
+    # npmInstall "pyright"
+    # npmInstall "bash-language-server"
+    # npmInstall "vscode-langservers-extracted"
+    # npmInstall "typescript"
+    # npmInstall "typescript-language-server"
     if [ ! -d $HOME/.config/nvim/lsp/java ]; then
         CUR_DIR=$(pwd)
         mkdir -p $HOME/.config/nvim/lsp/java
