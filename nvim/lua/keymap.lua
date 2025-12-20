@@ -17,6 +17,7 @@ vim.api.nvim_set_keymap('n', '<leader>bc', '<cmd>BufferClose<CR>', { noremap = t
 vim.api.nvim_set_keymap('n', '<leader>ko', 'o<Esc>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>kp', 'yyp', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>k=', [[:let l:line = line('.')<CR>gg=G<CR>call cursor(l:line,0)<CR>]], { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>z', '<cmd>ZenMode<CR>', { noremap = true })
 
 -- insertモード時の設定
 vim.api.nvim_set_keymap('i', 'fj', '<Esc><Esc>', { silent = true })

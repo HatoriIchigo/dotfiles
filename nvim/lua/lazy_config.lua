@@ -46,6 +46,8 @@ require("lazy").setup({
         {"ntpeters/vim-better-whitespace"},
         -- 検索ハイライトプラグイン
         {"kevinhwang91/nvim-hlslens"},
+        -- 集中モード
+        { import = "plugins.zenmode" },
 
         ---------------------------------------------------------
         ---                   Git操作                         ---
