@@ -108,11 +108,6 @@ function apt_installer() {
 	cd $CUR_DIR
     fi
 
-    # deinインストール
-    if [ ! -d $HOME/.config/nvim/dein.vim ]; then
-	git clone https://github.com/Shougo/dein.vim $HOME/.config/nvim/dein.vim
-    fi
-
     # 設定ファイルインストール
     if [ ! -d $HOME/.config/nvim ]; then
 	mkdir -p $HOME/.config/nvim
