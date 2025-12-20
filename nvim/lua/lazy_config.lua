@@ -78,11 +78,9 @@ require("lazy").setup({
         {"hrsh7th/cmp-path"},
         -- cmp補完でアイコンを出す
         {"onsails/lspkind.nvim"},
+        {"hrsh7th/vim-vsnip"},
         -- luaSnip補完
         {"L3MON4D3/LuaSnip"},
-        -- 自動補完管理プラグイン
-        {"williamboman/mason.nvim"},
-        {"williamboman/mason-lspconfig.nvim"},
         -- lint
         {"jose-elias-alvarez/null-ls.nvim"},
 

@@ -101,7 +101,7 @@ function apt_installer() {
 	tar -xzvf jdt-language-server-latest.tar.gz
 	jar_path=$(ls ~/.config/nvim/lsp/java/plugins/org.eclipse.equinox.launcher_*)
 	if [ $(echo ${jar_path} | wc -l) -eq 1 ]; then
-	    echo "JDTLS_JAR=${jar_path}" >> ~/.bashrc
+	    echo "JDTLS_JAR=\"${jar_path}\"" >> ~/.bashrc
 	fi
 	wget https://projectlombok.org/downloads/lombok.jar
 	rm jdt-language-server-latest.tar.gz
