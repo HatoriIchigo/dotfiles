@@ -43,7 +43,7 @@ require("lazy").setup({
         -- ウィンドウ関連操作のプラグイン
         {"tkmpypy/chowcho.nvim"},
         -- 行末の空白スペースを表示
-        {"ntpeters/vim-better-whitespace"},
+        { import = "plugins.whitespace" },
         -- 検索ハイライトプラグイン
         {"kevinhwang91/nvim-hlslens"},
         -- 集中モード
@@ -139,5 +139,20 @@ require("lazy").setup({
         {"HiPhish/rainbow-delimiters.nvim"},
         {"nvim-treesitter/nvim-treesitter"},
 
+        -- project
+        { import = "plugins.project" },
+
+        -- util
+        { import = "plugins.dashboard" },
+
     }
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "snacks_dashboard",
+  callback = function()
+    -- better-whitespace が走った場合に消す
+    vim.cmd("silent! call clearmatches()")
+    -- 再度残す必要があればここで再描画
+  end,
 })
