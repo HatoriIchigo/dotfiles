@@ -54,7 +54,7 @@ vim.api.nvim_set_keymap('n', '<leader>aa', '<cmd>AerialToggle<CR>', { noremap = 
 -- treesj
 vim.api.nvim_set_keymap('n', '<leader>jj', '<cmd>lua require("treesj").toggle()<CR>', { noremap = true })
 
--- lazygit
+-- Git関連
 local Terminal = require("toggleterm.terminal").Terminal
 local lazygit = Terminal:new({ cmd = "lazygit", direction = "float", hidden = true })
 
@@ -62,5 +62,9 @@ function _lazygit_toggle()
 	lazygit:toggle()
 end
 
-vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>gh", "<cmd>DiffviewOpen HEAD~1<CR>", { desc = "Git file history", silent = true})
+vim.api.nvim_set_keymap("n", "<leader>gm", "<cmd>DiffviewOpen --merge<CR>", { desc = "Git merge", silent = true})
+vim.api.nvim_set_keymap("n", "<leader>gc", "<cmd>DiffviewClose<CR>", { desc = "Diffview close", silent = true})
+vim.api.nvim_set_keymap("n", "<leader>gn", "<cmd>DiffviewToggleFiles<CR>", { desc = "Diffview toggle file", silent = true})
 
