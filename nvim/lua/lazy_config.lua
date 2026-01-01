@@ -145,6 +145,9 @@ require("lazy").setup({
         -- util
         { import = "plugins.dashboard" },
 
+        -- kanban
+        { import = "plugins.kanban" },
+
     }
 })
 
