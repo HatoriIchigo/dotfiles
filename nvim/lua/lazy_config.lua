@@ -24,7 +24,7 @@ require("lazy").setup({
         ---                  ビジュアル                      ---
         ---------------------------------------------------------
         -- カラースキーマ
-        {"tomasr/molokai"},
+        {"EdenEast/nightfox.nvim"},
         -- ステータスバー＆タブバー
         {"nvim-lualine/lualine.nvim"},
         -- アイコン系

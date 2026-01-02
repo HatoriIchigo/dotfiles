@@ -45,3 +45,5 @@ vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 2
 
 vim.opt.showtabline = 0
+
+vim.cmd("colorscheme carbonfox")

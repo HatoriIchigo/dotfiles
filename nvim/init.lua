@@ -5,7 +5,7 @@ require("keymap")
 require("tab")
 
 -- require("plugins/devicons")
-require("plugins/molokai")
+-- require("plugins/molokai")
 require("plugins/lualine")
 require("plugins/lspconfig")
 require("plugins/nvim_cmp")
