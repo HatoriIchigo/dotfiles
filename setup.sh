@@ -160,6 +160,7 @@ function apt_installer() {
     npmInstall "vscode-langservers-extracted"
     npmInstall "typescript"
     npmInstall "typescript-language-server"
+    npmInstall "tree-sitter-cli"
     if [ ! -d $HOME/.config/nvim/lsp/java ]; then
         CUR_DIR=$(pwd)
         mkdir -p $HOME/.config/nvim/lsp/java
